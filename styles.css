@@ -1,0 +1,217 @@
+/*
+COLOR PALETTE
+Choose a color palette and paste the hex codes here to use below
+https://coolors.co/
+
+Keep these two:
+#343434 Dark color for fonts on a light background
+#F7FFF7 light color for fonts on a dark background
+
+Add your colors here...
+#3F0D12 / rgb(63, 13, 18) - Black Bean - maroon
+#A71D31 / rgb(167, 29, 49) - Madder - red
+#f8f7ee / rgb(241, 240, 204) - Floral White - an easier on the eyes kind of white
+#D5BF86 / rgb(213, 191, 134) - Ecru - like chino pants 
+#8D775F / rgb(141, 119, 95) - Chamoise - coffee-
+#F786AA / rgb(247, 134, 170) - Tickle me Pink - concha pink
+rgb(252, 252, 240) - lighter than Floral White- good for the anchor boxes
+*/
+
+/* Global styles
+------------------------------------*/
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    color: #343434;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  img {
+    width: 300px;
+  }
+  a {
+    /* color: ; */
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  h1 {
+    font-size: 5em;
+    line-height: 1;
+    font-family: 'Abril Fatface';
+  }
+  h2 {
+    font-size: 1.25em;
+    font-family: 'Lugrasimo';
+  }
+  header h2 {
+    font-size: 2em;
+  }
+  h1, h2 {
+    font-weight: 700;
+    margin: 0;
+  }
+  .content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+  h3 {
+    margin-bottom: 0;
+    font-family: 'Abril Fatface';
+  }
+
+  /* Next-sibling combinator
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Next-sibling_combinator
+   separates two selectors and matches the second element only if it 
+   immediately follows the first element */
+  .item-details h3 + p {
+    font-style: italic;
+  }
+
+  /* Subsequent-sibling combinator
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator
+  Useful for all instances of the second element that follows the first. */
+  .item-details h3 ~ p {
+    margin: 0;
+  }
+
+  /* Child combinator
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator
+  It matches only those elements matched by the second selector that are the 
+  direct children of elements matched by the first. */
+  .divider > section {
+    border-bottom: 1px dashed #343434;
+    padding: 25px 0;
+  }
+  .divider > section:last-of-type {
+    border-bottom: none;
+  }
+  
+  
+  /* Profile
+  ------------------------------------*/
+  header {
+    background-color:#8D775F;
+    color: #F7FFF7; 
+  }
+  
+  
+  /* Projects
+  ------------------------------------*/
+  .projects {
+    background-color: #f8f7ee;
+  }
+  .projects a {
+    color: #A71D31; 
+  }
+  .projects .btn {
+    color: #A71D31;
+    background-color:rgb(252, 252, 240);
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  .projects .btn:hover {
+    color:#F7FFF7  ; 
+    background: navy;
+  }
+  .project-item {
+    overflow: hidden;
+  }
+  .project-item h3 {
+    margin-top: 0;
+  }
+  
+  .projects h2 {
+    color: #343434;
+  }
+
+  
+  /* Education
+  ------------------------------------*/
+  .education {
+    background-color: #3F0D12 ;
+    background-position: top right;
+    padding-bottom: 100px;
+  }
+  .education p, h2 {
+    width: 60%;
+    color:#F7FFF7
+  }
+  .education h3{
+    color: #D5BF86;
+  }
+  .education a {
+    color:#F786AA;
+  }
+  /* Contact Info
+  ------------------------------------*/
+  footer {
+    background: darkgrey;
+    color: #F7FFF7;
+  }
+  .contact-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  .contact-list a {
+    padding: 15px;
+    display: inline-block;
+    color: #A71D31;
+  }
+  
+  .contact-list a:hover {
+    color: teal;
+  }
+
+
+/* Responsive
+------------------------------------*/
+@media screen and (min-width:750px){
+  header, footer {
+    text-align: center;
+  }
+  .project-item img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+  .contact-list {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width:749px){
+  h1 {
+    font-size: 2em;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 1.2em;
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
+  img {
+    width: 200px;
+  }
+}
